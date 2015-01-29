@@ -6,10 +6,10 @@ $ ->
     console.log "got click"
     e.preventDefault();
     $.ajax
-      url: 'http://qa-feature.bookshout.com/authenticate_portal.json'
+      url: 'http://staging.bookshout.com/authenticate_portal.json'
       type: 'GET'
       data: 
-        bookshout_promo_auth_token: "CPXWZIBCaHLiKsbvzoeSGmRJtfemefusGoqqWZdzTnjedLKaPI"
+        bookshout_promo_auth_token: "yQmBzaTZIecmdrfWLZJswBNZHbalFzqPTxcqGLeJuGdZChHwtV"
       success: (data) ->
         console.log data
         redirect_url = data.redirect_url
