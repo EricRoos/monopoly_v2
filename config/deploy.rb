@@ -60,13 +60,11 @@ task :deploy => :environment do
     
     to :launch do
       queue "touch #{deploy_to}/tmp/restart.txt"
+      queue 'sudo /etc/init.d/apache2 restart'
     end
   end
 end
 
-task :restart do
-  queue 'sudo /etc/init.d/apache2 restart'
-end
 
 # For help in making your deploy script, see the Mina documentation:
 #
