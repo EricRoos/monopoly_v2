@@ -58,5 +58,4 @@ production:
   pool: 5
   username: root
   password: <%= ENV['database_password'] %>
-  password:
   socket: /var/run/mysqld/mysqld.sock
