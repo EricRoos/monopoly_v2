@@ -48,8 +48,6 @@ task :setup => :environment do
   queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
 end
 
-desc "Deploys the current version to the server."
-desc "Create new database"
 task :deploy => :environment do
   deploy do
     # Put things that will set up an empty directory into a fully set-up
