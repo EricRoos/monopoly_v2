@@ -65,7 +65,7 @@ task :deploy => :environment do
 end
 
 task :restart do
-  queue 'sudo service restart apache'
+  queue 'sudo /etc/init.d/apache2 restart'
 end
 
 # For help in making your deploy script, see the Mina documentation:
