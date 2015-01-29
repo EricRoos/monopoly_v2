@@ -57,11 +57,15 @@ task :deploy => :environment do
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
-
+    
     to :launch do
       queue "touch #{deploy_to}/tmp/restart.txt"
     end
   end
+end
+
+task :restart do
+  queue 'sudo service restart apache'
 end
 
 # For help in making your deploy script, see the Mina documentation:
