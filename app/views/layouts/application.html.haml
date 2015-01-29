@@ -1,0 +1,21 @@
+%html(lang="en")
+  %head
+    %title Fake web portal
+    %meta(charset="utf-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    = stylesheet_link_tag "application" 
+    = javascript_include_tag "application" 
+    = yield :meta
+    = yield :stylesheets
+    = yield :scripts
+  %body
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand(href="#")
+            Your Web Portal
+    .row
+      .col-md-2
+        %p
+      .col-md-8
+        = yield
