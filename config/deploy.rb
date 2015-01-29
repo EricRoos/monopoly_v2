@@ -49,6 +49,27 @@ task :setup => :environment do
 end
 
 desc "Deploys the current version to the server."
+desc "Create new database"
+task :'setup:db' => :environment do
+  queue! %{
+    echo "-----> Import RYAML function"
+    #{RYAML}
+    echo "-----> Read database.yml"
+    USERNAME=$(ryaml #{deploy_to!}/#{shared_path!}/config/database.yml #{rails_env} username)
+    PASSWORD=$(ryaml #{deploy_to!}/#{shared_path!}/config/database.yml #{rails_env} password)
+    DATABASE=$(ryaml #{deploy_to!}/#{shared_path!}/config/database.yml #{rails_env} database)
+    echo "-----> Create SQL query"
+    Q1="CREATE DATABASE IF NOT EXISTS $DATABASE;"
+    Q2="GRANT USAGE ON *.* TO $USERNAME@localhost IDENTIFIED BY '$PASSWORD';"
+    Q3="GRANT ALL PRIVILEGES ON $DATABASE.* TO $USERNAME@localhost;"
+    Q4="FLUSH PRIVILEGES;"
+    SQL="${Q1}${Q2}${Q3}${Q4}"
+    echo "-----> Execute SQL query to create DB and user"
+    echo "-----> Enter MySQL root password on prompt below"
+    #{echo_cmd %[mysql -uroot -p -e "$SQL"]}
+    echo "-----> Done"
+  }
+end
 task :deploy => :environment do
   deploy do
     # Put things that will set up an empty directory into a fully set-up
@@ -56,7 +77,6 @@ task :deploy => :environment do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    invoke :'rails:db_create'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
 
