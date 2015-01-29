@@ -51,4 +51,4 @@ production:
   <<: *default
   database: bootstrap_app_production
   username: root
-  password: 
+  password: <%= ENV['database_password'] %>
