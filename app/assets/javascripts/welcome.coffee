@@ -16,6 +16,7 @@
       success: (data) ->
         $("#status").html("redirecting...");
         redirect_url = data.redirect_url
+        window.location redirect_url,"_blank"
       errors: ->
         console.log "error"
       dataType: "jsonp"
