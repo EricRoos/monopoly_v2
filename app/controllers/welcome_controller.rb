@@ -4,8 +4,11 @@ class WelcomeController < ApplicationController
       @endpoint = "http://bookshout.dev/authenticate_portal.json"
       @key = "RhJHoBYtBkxLWUKsmOUQldYhMKRAfEdTpogWALmrKRBmPItcCR"
     elsif Rails.env.production?
-      @endpoint = "https://staging.bookshout.com/authenticate_portal.json"
-      @key = "yQmBzaTZIecmdrfWLZJswBNZHbalFzqPTxcqGLeJuGdZChHwtV"
+      @staging_endpoint = "https://staging.bookshout.com/authenticate_portal.json"
+      @staging_key = "yQmBzaTZIecmdrfWLZJswBNZHbalFzqPTxcqGLeJuGdZChHwtV"
+
+      @qa_endpoint= "https://qa.bookshout.com/authenticate_portal.json"
+      @qa_key = "oSoGyIjGdcTzIVYulxQowbzHzEazPPAEMxlSVIVitaWuSOfZji"
     end
   end
 end
