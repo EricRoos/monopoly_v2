@@ -1,12 +1,23 @@
 :javascript
   $(document).ready(function(){
-    register_promo_link($("#staging-bookshout-promo-link"),"#{@staging_endpoint}","#{@staging_key}");
-    register_promo_link($("#qa-bookshout-promo-link"),"#{@qa_endpoint}","#{@qa_key}");
+    register_promo_link($("#development-bookshout-promo-link"),"#{@development_endpoint}","#{@development_key}");
+    //register_promo_link($("#staging-bookshout-promo-link"),"#{@staging_endpoint}","#{@staging_key}");
+    //register_promo_link($("#qa-bookshout-promo-link"),"#{@qa_endpoint}","#{@qa_key}");
   });
 .row
   %h1 Bookshout Web Portal
   %p
     This page serves as simulation of the AMEX web portal to redeem a free book. Refereshing the campaign page 
+.row
+  .panel.panel-default
+    .panel-body
+      %p
+        Before clicking the button, naviagte to:
+        %a(href="http://bookshout.dev/pawnee") https://bookshout.dev/pawnee
+        and notice you will be rejected and redirected to the bookshout store front.
+      %p
+        Click the link and you will be allowed to continue with the redemption process
+      %buton#development-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get development free book
 .row
   .panel.panel-default
     .panel-body
