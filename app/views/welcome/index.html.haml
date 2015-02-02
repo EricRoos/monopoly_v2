@@ -1,7 +1,7 @@
 :javascript
   $(document).ready(function(){
-    register_promo_link("#staging-bookshout-promo-link","#{@staging_endpoint}","#{@staging_key}");
-    register_promo_link("#qa-bookshout-promo-link","#{@qa_endpoint}","#{@qa_key}");
+    register_promo_link($("#staging-bookshout-promo-link"),"#{@staging_endpoint}","#{@staging_key}");
+    register_promo_link($("#qa-bookshout-promo-link"),"#{@qa_endpoint}","#{@qa_key}");
   });
 .row
   %h1 Bookshout Web Portal
@@ -16,18 +16,14 @@
         and notice you will be rejected and redirected to the bookshout store front.
       %p
         Click the link and you will be allowed to continue with the redemption process
-      %buton#staging-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get free book
-      %span#status
-        Waiting for action
+      %buton#staging-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get staging free book
 .row
   .panel.panel-default
     .panel-body
       %p
         Before clicking the button, naviagte to:
-        %a(href="http://staging.bookshout.com/amex-prototype-company") https://qa-feature.bookshout.com/amex-prototype-company
+        %a(href="http://qa.bookshout.com/amex-prototype-company") https://qa-feature.bookshout.com/amex-prototype-company
         and notice you will be rejected and redirected to the bookshout store front.
       %p
         Click the link and you will be allowed to continue with the redemption process
-      %buton#qa-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get free book
-      %span#status
-        aiting for action
+      %buton#qa-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get qa free book

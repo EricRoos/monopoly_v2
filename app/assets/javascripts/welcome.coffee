@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 @register_promo_link = (ele_selector,endpoint,key) ->
   console.log "registered promo link to endpoint " + endpoint + " with key " + key
-  $(ele_selector).on "click", (e) ->
+  ele_selector.on "click", (e) ->
     console.log "setting link val";
     $("a#hidden_link").val("testting");
     e.preventDefault();
