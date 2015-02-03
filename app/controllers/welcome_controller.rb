@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
       @staging_endpoint = "https://staging.bookshout.com/authenticate_portal.json"
       @staging_key = "yQmBzaTZIecmdrfWLZJswBNZHbalFzqPTxcqGLeJuGdZChHwtV"
 
-      @qa_endpoint= "https://qa.bookshout.com/authenticate_portal.json"
+      @qa_endpoint= "https://qa.bookshout.com/authenticatePortal.json"
       @qa_key = "oSoGyIjGdcTzIVYulxQowbzHzEazPPAEMxlSVIVitaWuSOfZji"
     end
   end
