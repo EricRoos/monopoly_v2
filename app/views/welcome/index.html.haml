@@ -6,50 +6,31 @@
     register_promo_link($("#prod-bookshout-promo-link"),"#{@prod_endpoint}","#{@prod_key}");
   });
 .row
-  %h1 Bookshout Web Portal
-  %p
-    This page serves as simulation of the AMEX web portal to redeem a free book. Refereshing the campaign page 
+  .col-xs-12.col-lg-12
+    %h1 Bookshout Web Portal
+    %p
+      This page serves as simulation of the AMEX web portal to redeem a free book. Refereshing the campaign page 
 .row
-  .panel.panel-default
-    .panel-body
-      %h2 Development
-      %p
-        Before clicking the button, naviagte to:
-        %a(href="http://bookshout.dev/pawnee") https://bookshout.dev/pawnee
-        and notice you will be rejected and redirected to the bookshout store front.
-      %p
-        Click the link and you will be allowed to continue with the redemption process
-      %a#development-bookshout-promo-link.btn.btn-primary.btn-lg.disabled(type="button"){:target => "_blank"} Authorizing...
+  .col-xs-12.col-lg-12
+    .panel.panel-default
+      .panel-body
+        %h2 Development
+        %p
+          Before clicking the button, naviagte to:
+          %a(href="http://bookshout.dev/pawnee") https://bookshout.dev/pawnee
+          and notice you will be rejected and redirected to the bookshout store front.
+        %p
+          Click the link and you will be allowed to continue with the redemption process
+        %a#development-bookshout-promo-link.btn.btn-primary.btn-lg.disabled(type="button"){:target => "_blank"} Authorizing...
 .row
-  .panel.panel-default
-    .panel-body
-      %h2 QA
-      %p
-        Before clicking the button, naviagte to:
-        %a(href="http://staging.bookshout.com/amex-prototype-company") https://staging.bookshout.com/amex-prototype-company
-        and notice you will be rejected and redirected to the bookshout store front.
-      %p
-        Click the link and you will be allowed to continue with the redemption process
-      %a#staging-bookshout-promo-link.btn.btn-primary.btn-lg(type="button"){:target => "_blank"} Authorizing...
-.row
-  .panel.panel-default
-    .panel-body
-      %h2 Staging
-      %p
-        Before clicking the button, naviagte to:
-        %a(href="http://qa.bookshout.com/amex-pro") https://qa.bookshout.com/amex-pro
-        and notice you will be rejected and redirected to the bookshout store front.
-      %p
-        Click the link and you will be allowed to continue with the redemption process
-      %a#qa-bookshout-promo-link.btn.btn-primary.btn-lg(type="button"){ :target => "_blank"} Authorizing...
-.row
-  .panel.panel-default
-    .panel-body
-      %h2 Prod
-      %p
-        Before clicking the button, naviagte to:
-        %a(href="https://bookshout.com/amex") https:/bookshout.com/amex
-        and notice you will be rejected and redirected to the bookshout store front.
-      %p
-        Click the link and you will be allowed to continue with the redemption process
-      %a#prod-bookshout-promo-link.btn.btn-primary.btn-lg(type="button"){ :target => "_blank"} Authorizing...
+  .col-xs-12.col-lg-12
+    .panel.panel-default
+      .panel-body
+        %h2 Prod
+        %p
+          Before clicking the button, naviagte to:
+          %a(href="https://bookshout.com/amex") https:/bookshout.com/amex
+          and notice you will be rejected and redirected to the bookshout store front.
+        %p
+          Click the link and you will be allowed to continue with the redemption process
+        %a#prod-bookshout-promo-link.btn.btn-primary.btn-lg(type="button"){ :target => "_blank"} Authorizing...
