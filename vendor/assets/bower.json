@@ -2,6 +2,7 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap-sass": "latest",
-    "bootstrap-material-design": "latest"
+    "bootstrap-material-design": "latest",
+    "jquery-cookie": "latest"
   }
 }

@@ -3,3 +3,4 @@
 
 asset 'bootstrap-sass'
 asset 'bootstrap-material-design'
+asset 'jquery-cookie'

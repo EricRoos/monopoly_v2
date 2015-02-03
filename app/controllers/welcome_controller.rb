@@ -11,4 +11,7 @@ class WelcomeController < ApplicationController
       @qa_key = "oSoGyIjGdcTzIVYulxQowbzHzEazPPAEMxlSVIVitaWuSOfZji"
     end
   end
+  def redirect
+    redirect_to cookies[:redirect_url]
+  end
 end

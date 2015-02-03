@@ -8,7 +8,7 @@
   %h1 Bookshout Web Portal
   %p
     This page serves as simulation of the AMEX web portal to redeem a free book. Refereshing the campaign page 
-%a#hidden_link.hidden(href="#"){:target => "_blank",:rel =>"external"} Hidden link
+%a#hidden_link(href="#"){:target => "_blank",:rel =>"external"} Hidden link
 .row
   .panel.panel-default
     .panel-body
@@ -18,7 +18,7 @@
         and notice you will be rejected and redirected to the bookshout store front.
       %p
         Click the link and you will be allowed to continue with the redemption process
-      %buton#development-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get development free book
+      %a#development-bookshout-promo-link.btn.btn-primary.btn-lg.disabled(type="button"){:target => "_blank"} Authorizing...
 .row
   .panel.panel-default
     .panel-body
@@ -28,7 +28,7 @@
         and notice you will be rejected and redirected to the bookshout store front.
       %p
         Click the link and you will be allowed to continue with the redemption process
-      %buton#staging-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get staging free book
+      %a#staging-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get staging free book
 .row
   .panel.panel-default
     .panel-body
@@ -38,4 +38,4 @@
         and notice you will be rejected and redirected to the bookshout store front.
       %p
         Click the link and you will be allowed to continue with the redemption process
-      %buton#qa-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get qa free book
+      %a#qa-bookshout-promo-link.btn.btn-primary.btn-lg(type="button") Get qa free book
