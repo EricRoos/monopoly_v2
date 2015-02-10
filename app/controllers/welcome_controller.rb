@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
     if Rails.env.development?
       @development_endpoint = "http://bookshout.dev/authenticate_portal.json"
       @development_key = "RhJHoBYtBkxLWUKsmOUQldYhMKRAfEdTpogWALmrKRBmPItcCR"
+      response.headers["Access-Control-Allow-Origin"] = "*"
     elsif Rails.env.production?
       @staging_endpoint = "https://staging.bookshout.com/authenticate_portal.json"
       @staging_key = "yQmBzaTZIecmdrfWLZJswBNZHbalFzqPTxcqGLeJuGdZChHwtV"
