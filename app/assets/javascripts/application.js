@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jquery-cookie
 //= require turbolinks
-//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require_tree .
